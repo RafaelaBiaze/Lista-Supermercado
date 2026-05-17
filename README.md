@@ -54,7 +54,7 @@ Durante o desenvolvimento deste projeto, mergulhei em conceitos fundamentais do 
 
 Como o sistema foi otimizado para ser estático, você tem duas opções:
 
-1. **Online:** Acesse diretamente pelo link do GitHub Pages: `[INSIRA_SEU_LINK_AQUI]`
+1. **Online:** Acesse diretamente pelo link do GitHub Pages: [https://rafaelabiaze.github.io/Lista-Supermercado/](https://rafaelabiaze.github.io/Lista-Supermercado/)
 2. **Localmente:** * Clone o repositório.
 * Abra o arquivo `index.html` em um navegador (recomenda-se usar a extensão *Live Server* do VS Code para suporte ao carregamento do JSON).
 
