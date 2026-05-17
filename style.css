@@ -36,68 +36,57 @@ h2 {
 /* --- ÁREA DE BUSCA ATUALIZADA --- */
 
 .busca-container {
+    width: 100%;
+    margin-bottom: 20px;
     position: relative;
+}
+
+.input-group {
+    display: flex;
+    align-items: stretch; /* Garante que input e botão tenham a mesma altura */
+    gap: 8px;
     width: 100%;
 }
 
-/* Novo grupo para alinhar input + botão */
-.input-group {
-    display: flex;
-    gap: 8px;
-}
-
 #input-busca {
-    flex: 1; /* Faz o input ocupar todo o espaço restante */
-    padding: 12px 16px;
-    font-size: 1rem;
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    font-size: 16px;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
     outline: none;
-    transition: all 0.2s;
+    transition: border-radius 0.2s;
 }
 
-#input-busca:focus {
-    border-color: #4a90e2;
-}
-
-/* Estilo do botão de Adicionar Manual (+) */
 #btn-adicionar-manual {
-    background-color: #2ecc71; /* Verde */
+    flex-shrink: 0; 
+    width: 50px;
+    background-color: #2ecc71;
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 0 15px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#btn-adicionar-manual:hover {
-    background-color: #27ae60;
-}
-
-#btn-adicionar-manual:active {
-    transform: scale(0.95); /* Efeito de clique */
-}
-
-/* Dropdown flutuante */
 .dropdown-resultados {
     position: absolute;
     top: 100%;
     left: 0;
-    width: calc(100% - 58px); /* Alinha apenas sob o input, descontando o botão */
+    width: calc(100% - 58px); /* Alinhado com o input */
     background-color: #fff;
     border: 1px solid #e0e0e0;
     border-top: none;
     border-radius: 0 0 8px 8px;
+    z-index: 999;
     max-height: 200px;
     overflow-y: auto;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .item-dropdown {
@@ -185,7 +174,7 @@ h2 {
 }
 
 #btn-pdf {
-    background-color: #e74c3c; /* Vermelho estilo PDF */
+    background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 6px;
@@ -204,4 +193,57 @@ h2 {
     font-size: 0.9rem;
     color: #666;
     font-weight: normal;
+}
+
+/* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .header-lista {
+        display: flex;
+        flex-direction: column; /* Empilha os itens */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+        /* Força a linha a aparecer e ocupar tudo */
+        border-bottom: 2px solid #ddd; 
+        padding-bottom: 15px; 
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .header-info {
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2px;
+    }
+
+    #contador-total {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #btn-pdf {
+        width: 100%; 
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .linha-produto {
+        gap: 8px;
+        padding: 12px 5px;
+    }
 }

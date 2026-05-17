@@ -13,12 +13,14 @@
     <div class="container">
         <!-- Área de Busca -->
         <div class="busca-container">
-            <div class="input-group">
+            <div class="input-group" style="position: relative;"> 
                 <input type="text" id="input-busca" placeholder="Digite o produto..." autocomplete="off">
                 <button id="btn-adicionar-manual">＋</button>
+                
+                <div id="dropdown" class="dropdown-resultados"></div>
             </div>
-            <div id="dropdown" class="dropdown-resultados"></div>
-            <p style="color: #888;">Não encontrou o produto! Apenas digite o nome dele e adicione na sua lista.</p>
+            
+            <p style="color: #888; margin-top: 8px;">Não encontrou o produto! Apenas digite o nome dele e adicione na sua lista.</p>
         </div>
 
         <!-- Área da Lista de Compras -->
