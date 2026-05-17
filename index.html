@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Supermercado</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Área de Busca -->
+        <div class="busca-container">
+            <div class="input-group">
+                <input type="text" id="input-busca" placeholder="Digite o produto..." autocomplete="off">
+                <button id="btn-adicionar-manual">＋</button>
+            </div>
+            <div id="dropdown" class="dropdown-resultados"></div>
+            <p style="color: #888;">Não encontrou o produto! Apenas digite o nome dele e adicione na sua lista.</p>
+        </div>
+
+        <!-- Área da Lista de Compras -->
+        <div class="header-lista">
+            <h2>Minha Lista</h2>
+            <span id="contador-total">Total: 0 itens</span>
+            <button id="btn-pdf" title="Exportar para PDF">📄 Exportar PDF</button>
+        </div>
+        <div id="container-lista">
+            <p style="color: #888; text-align: center;">Sua lista está vazia.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
